@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
 const users = require("./data").userDB;
 const Path = require("./util").Path;
+const { PORT = 3000 } = process.env;
 const getHomePage = require("./controllers/getHomePage").getHomePage;
 
 const app = express();
@@ -73,6 +74,6 @@ app.post("/login", async (req, res) => {
   }
 });
 
-server.listen(3000, function () {
-  console.log(`server is listening on port: ${3000}`);
+server.listen(PORT, function () {
+  console.log(`server is listening on port: ${PORT}`);
 });
