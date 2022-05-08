@@ -5,12 +5,28 @@
     font-family: "Open Sans", sans-serif;
   }
   body {
-    border: 1px solid red;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+  .heading{
+      margin: 2rem 0rem;
+  }
+  .box {
+    width: 300px;
+    height: 250px;
+    border: 1px solid rebeccapurple;
+    box-shadow: 0px 0px 40px 7px rgba(0, 0, 0, 0.46);
+    -webkit-box-shadow: 0px 0px 40px 7px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 0px 0px 40px 7px rgba(0, 0, 0, 0.46);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .box span {
+      margin: 0px 1rem;
   }
   input{
       display: block;
@@ -25,6 +41,7 @@
   }
   form {
     width: 500px;
+    margin-bottom: 2rem;
   }
   form fieldset {
     padding: 2rem;
@@ -42,3 +59,14 @@
     margin-bottom: 4px;
   }
   
+
+  .action-buttons{
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+    background: aliceblue;
+    margin-bottom: 1rem;
+    width: 6rem;
+    text-align: center;
+  }

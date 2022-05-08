@@ -13,8 +13,6 @@ const server = http.createServer(app);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(Path("./public"));
 
-// app.get("/", getHomePage);
-
 app.post("/register", async (req, res) => {
   try {
     let foundUser = users.find((data) => req.body.email === data.email);
@@ -54,7 +52,7 @@ app.post("/login", async (req, res) => {
       if (passwordMatch) {
         let usrname = foundUser.username;
         res.send(
-          `<div align ='center'><h2>login successful</h2></div><br><br><br><div align ='center'><h3>Hello ${usrname}</h3></div><br><br><div align='center'><a href='./login.html'>logout</a></div>`
+          `<div align ='center'><h2 class="heading">login successful</h2></div><br><br><br><div align ='center'><h3>Hello ${usrname}</h3></div><br><br><div align='center'><a href='./login.html'>logout</a></div>`
         );
       } else {
         res.send(
